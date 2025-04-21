@@ -2,14 +2,11 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/pair.js",
+      "src": "Maher-Zubair.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
-    {
-      "src": "/api/pair",
-      "dest": "/api/pair.js"
-    }
+    { "src": "/(.*)", "dest": "Maher-Zubair.js" }
   ]
 }
