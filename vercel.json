@@ -2,14 +2,16 @@
   "version": 2,
   "builds": [
     {
-      "src": "Maher-Zubair.js",
+      "src": "api/Maher-Zubair.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "public/index.html",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
-    {
-      "src": "/api/qr",
-      "dest": "Maher-Zubair.js"
-    }
+    { "src": "/api/(.*)", "dest": "/api/Maher-Zubair.js" },
+    { "src": "/(.*)", "dest": "/public/index.html" }
   ]
 }
