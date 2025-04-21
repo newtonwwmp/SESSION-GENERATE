@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "Maher-Zubair.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/qr",
+      "dest": "Maher-Zubair.js"
+    }
+  ]
+}
